@@ -1,20 +1,22 @@
 {
-
-  "manifest_version": 2,
-  "name": "NewTab",
-  "version": "1.0",
-
-  "description": "Opens links in new tabs automatically",
-
-  "icons": {
-    // "48": "icons/border-48.png"
-  },
-
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["newtab.js"]
-    }
-  ]
-
+    "browser_specific_settings": {
+	"gecko": {
+	    "id": "no-new-tab@shezi.de",
+	    "strict_min_version": "97.0"
+	}
+    },
+    "manifest_version": 2,
+    "name": "NoNewTab",
+    "version": "1.0",
+    "description": "Never open links in new tabs!",
+    "icons": {
+	// there is no icon
+	// "48": "icons/border-48.png"
+    },
+    "content_scripts": [
+	{
+	    "matches": ["<all_urls>"],
+	    "js": ["nonewtab.js"]
+	}
+    ]
 }
